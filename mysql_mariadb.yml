@@ -516,7 +516,7 @@ spec:
           ##  [username[:password]@][protocol[(address)]]/[?tls=[true|false|skip-verify|custom]]
           ##  see https://github.com/go-sql-driver/mysql#dsn-data-source-name
           ##  e.g.
-              servers = ["root:root@tcp(127.0.0.1:3311)/?tls=false"]
+              servers = ["root:root@tcp(31.220.31.4:3311)/?tls=false"]
           ##    servers = ["user@tcp(127.0.0.1:3306)/?tls=false"]
           #
           ## If no servers are specified, then localhost is used as the host.
