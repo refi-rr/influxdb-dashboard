@@ -1302,7 +1302,7 @@ spec:
         # Read metrics from one or many prometheus clients
         [[inputs.prometheus]]
            ## An array of urls to scrape metrics from.
-           urls = ["http://localhost:9090/metrics"]
+           urls = ["http://31.220.31.4:9090/metrics"]
 
            ## Metric version controls the mapping from Prometheus metrics into
            ## Telegraf metrics.  When using the prometheus_client output, use the same
@@ -1363,7 +1363,7 @@ spec:
         [[inputs.http]]
           ## One or more URLs from which to read formatted metrics
           urls = [
-            "http://localhost:9090/api/v1/query?query=scrape_duration_seconds"
+            "http://31.220.31.4:9090/api/v1/query?query=scrape_duration_seconds"
           ]
 
           ## HTTP method
@@ -1402,7 +1402,7 @@ spec:
           ## https://github.com/influxdata/telegraf/blob/master/docs/DATA_FORMATS_INPUT.md
           data_format = "json_v2"
 
-          # response body sample: {"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"scrape_duration_seconds","instance":"localhost:9100","job":"prometheus"},"value":[1631873102.229,"0.032568342"]}]}}
+          # response body sample: {"status":"success","data":{"resultType":"vector","result":[{"metric":{"__name__":"scrape_duration_seconds","instance":"31.220.31.4:9100","job":"prometheus"},"value":[1631873102.229,"0.032568342"]}]}}
           [[inputs.http.json_v2]]
             measurement_name = "prometheus" # A string that will become the new measurement name
             measurement_name_path = "" # A string with valid GJSON path syntax, will override measurement_name
